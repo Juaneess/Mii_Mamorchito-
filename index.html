@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cami el amor de mi vida 💙</title>
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+padding:0;
+font-family:'Times New Roman',serif;
+background:linear-gradient(135deg,#1e3c72,#6a1b9a);
+color:white;
+overflow-x:hidden;
+}
+
+/* PANTALLAS */
+
+.screen{
+display:none;
+min-height:100vh;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:30px 20px;
+box-sizing:border-box;
+}
+
+.active{
+display:flex;
+}
+
+/* TEXTOS INICIO */
+
+.texto{
+opacity:0;
+transform:translateY(10px);
+animation:aparecer 1s forwards;
+}
+
+.fade1{animation-delay:0.5s;}
+.fade2{animation-delay:1.2s;}
+.fade3{animation-delay:1.9s;}
+
+@keyframes aparecer{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.especial{
+position:relative;
+display:inline-block;
+margin:12px 0;
+font-size:22px;
+}
+
+.corazon{
+position:absolute;
+top:-8px;
+right:-10px;
+width:8px;
+height:8px;
+background:#8ec5ff;
+transform:rotate(45deg);
+}
+
+.corazon::before,
+.corazon::after{
+content:"";
+position:absolute;
+width:8px;
+height:8px;
+background:#8ec5ff;
+border-radius:50%;
+}
+
+.corazon::before{
+top:-4px;
+left:0;
+}
+
+.corazon::after{
+left:-4px;
+top:0;
+}
+
+/* DISPLAY */
+
+#display{
+margin-top:20px;
+font-size:24px;
+letter-spacing:8px;
+}
+
+/* TECLADO */
+
+.keypad{
+display:grid;
+grid-template-columns:repeat(3,70px);
+gap:12px;
+margin-top:25px;
+opacity:0;
+transition:1s;
+}
+
+.mostrar{
+opacity:1;
+}
+
+.key{
+background:rgba(255,255,255,0.1);
+border:1px solid rgba(255,255,255,0.2);
+border-radius:18px;
+padding:15px;
+font-size:20px;
+color:white;
+cursor:pointer;
+transition:0.2s;
+backdrop-filter:blur(5px);
+}
+
+.key:hover{
+background:rgba(255,255,255,0.25);
+transform:scale(1.08);
+}
+
+.key:active{
+transform:scale(0.92);
+}
+
+.cero{
+grid-column:2;
+}
+
+/* INTRO */
+
+.intro{
+font-size:34px;
+max-width:700px;
+line-height:1.8;
+animation:suave 2s infinite alternate;
+}
+
+@keyframes suave{
+from{opacity:0.7;}
+to{opacity:1;}
+}
+
+.heart-btn{
+margin-top:25px;
+font-size:30px;
+cursor:pointer;
+animation:latido 2s infinite;
+}
+
+@keyframes latido{
+0%,100%{transform:scale(1);}
+50%{transform:scale(1.15);}
+}
+
+/* CARTA */
+
+.notepad{
+width:100%;
+max-width:1200px;
+padding:100px 0;
+margin:auto;
+}
+
+/* TITULO */
+
+.notepad h1{
+text-align:center;
+font-size:46px;
+margin-bottom:110px;
+letter-spacing:2px;
+}
+
+/* TEXTO TIPO LIBRO */
+
+.notepad p{
+width:85%;
+max-width:900px;
+margin:auto;
+font-size:22px;
+line-height:2.9;
+text-align:justify;
+white-space:pre-line;
+}
+
+/* IMAGENES IZQUIERDA */
+
+.float-left{
+float:left;
+margin:45px 45px 45px 0;
+}
+
+.float-left img{
+width:180px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.35);
+transition:0.3s;
+}
+
+.float-left img:hover{
+transform:scale(1.03);
+}
+
+/* BOTON FINAL */
+
+.final-btn{
+display
